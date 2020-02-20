@@ -1,0 +1,109 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	string A{ "A" }, Asharp{ "A#" }, Aflat{ "Ab" };
+	string B{ "B" }, Bsharp{ "B#" }, Bflat{ "Bb" };    
+	string C{ "C" }, Csharp{ "C#" }, Cflat{ "Cb" };
+	string D{ "D" }, Dsharp{ "D#" }, Dflat{ "Db" };
+	string E{ "E" }, Esharp{ "E#" }, Eflat{ "Eb" };
+	string F{ "F" }, Fsharp{ "F#" }, Fflat{ "Fb" };
+	string G{ "G" }, Gsharp{ "G#" }, Gflat{ "Gb" };
+	string Input;
+	string Stop{ "Stop" };
+	
+	cout << "Enter the notes in capital letters separated by a space, ";
+	cout << "or type '" << Stop << "' to stop!S" << endl;
+	
+	while (Input != Stop)
+	{
+		cin >> Input;
+		if (Input == A) {
+			cout << "1.5th, 2.10th, 3.2nd, 4.7th, 5.0th, 6.5th" << endl;
+			cin >> Input;
+		}
+		if (Input == Asharp) {
+			cout << "1.6th, 2.11th, 3.3rd, 4.8th, 5.1st, 6.6th" << endl;
+			cin >> Input;
+		}
+		if (Input == Aflat) {
+			cout << "1.4th, 2.9th, 3.1st, 4.4th, 5,11th, 6.4th" << endl;
+			cin >> Input;
+		}
+		if (Input == B) {
+			cout << "1.7th, 2.0th, 3.4th, 4.9th, 5.2nd, 6.7th" << endl;
+			cin >> Input;
+		}
+		if (Input == Bsharp) {
+			cout << "1.8th, 2.1st, 3.5th, 4.10th, 5.3rd, 6.8th" << endl;
+			cin >> Input;
+		}
+		if (Input == Bflat) {
+			cout << "1.6th, 2.11th, 3.3rd, 4.8th, 5.1st, 6.6th" << endl;
+			cin >> Input;
+		}
+		if (Input == C) {
+			cout << "1.8th, 2.1st, 3.5th, 4.10th, 5.3rd, 6.8th" << endl;
+			cin >> Input;
+		}
+		if (Input == Csharp) {
+			cout << "1.9th, 2.2nd, 3.6th, 4.11th, 5.4th, 6.9th" << endl;
+			cin >> Input;
+		}
+		if (Input == Cflat) {
+			cout << "1.7th, 2.0th, 3.4th, 4.9th, 5.2nd, 6.7th" << endl;
+			cin >> Input;
+		}
+		if (Input == D) {
+			cout << "1.10th, 2.3rd, 3.7th, 4.0th, 5.5th, 6.10th" << endl;
+			cin >> Input;
+		}
+		if (Input == Dsharp) {
+			cout << "1.11th, 2.4th, 3.8th, 4.1st, 5.6th, 6.11th" << endl;
+			cin >> Input;
+		}
+		if (Input == Dflat) {
+			cout << "1.9th, 2.2nd, 3.6th, 4.11th, 5.4th, 6.9th" << endl;
+			cin >> Input;
+		}
+		if (Input == E) {
+			cout << "1.0th, 2.5th, 3.9th, 4.0th, 5.7th, 6.0th" << endl;
+			cin >> Input;
+		}
+		if (Input == Esharp) {
+			cout << "1.1st, 2.6th, 3.10th, 4.1st, 5.8th, 6.1st" << endl;
+			cin >> Input;
+		}
+		if (Input == Eflat) {
+			cout << "1.11th, 2.4th, 3.8th, 4.1st, 5.6th, 6.11th" << endl;
+			cin >> Input;
+		}
+		if (Input == F) {
+			cout << "1.1st, 2.6th, 3.10th, 4.1st, 5.8th, 6.1st" << endl;
+			cin >> Input;
+		}
+		if (Input == Fsharp) {
+			cout << "1.2nd, 2.7th, 3.11th, 4.2nd, 5.9th, 6.2nd" << endl;
+			cin >> Input;
+		}
+		if (Input == Fflat) {
+			cout << "1.0th, 2.5th, 3.9th, 4.0th, 5.7th, 6.0th" << endl;
+			cin >> Input;
+		}
+		if (Input == G) {
+			cout << "1.3rd, 2.8th, 3.0th, 4.3rd, 5.10th, 6.3rd" << endl;
+			cin >> Input;
+		}
+		if (Input == Gsharp) {
+			cout << "1.4th, 2.9th, 3.1st, 4.4th, 5,11th, 6.4th" << endl;
+			cin >> Input;
+		}
+		if (Input == Gflat) {
+			cout << "1.2nd, 2.7th, 3.11th, 4.2nd, 5.9th, 6.2nd" << endl;
+			cin >> Input;
+		}
+	}
+return 0;
+}
