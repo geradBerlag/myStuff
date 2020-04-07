@@ -1,0 +1,214 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector <string> positionOnString{ "--0--", "--1--", "--2--", "--3--", "--4--", "--5--", "--6--", "--7--", "--8--", "--9--", "-10--", "-11--", "-12--" };
+vector <string> input(1, "---");
+vector <string> outputFirstString(33, "-----");
+vector <string> outputSecondString(33, "-----");
+vector <string> outputThirdString(33, "-----");
+vector <string> outputFourthString(33, "-----");
+vector <string> outputFifithString(33, "-----");
+vector <string> outputSixthString(33, "-----");
+
+void starsFunction();
+void typedNotesOutput();
+
+int numNotes{ 0 };
+
+int main() {
+
+	cout << "Enter the number of notes to be translated: ";
+	cin >> numNotes;
+	input.resize(numNotes); // sets the size of the input vector according to the user
+
+	cout << "Enter the notes as capital letters with spaces between them: ";
+
+	for (int inputCounter{ 0 }; inputCounter < numNotes; inputCounter++) {
+		cin >> input.at(inputCounter);
+	}
+
+	typedNotesOutput();
+	cout << endl;
+	starsFunction();
+	cout << endl;
+
+	for (int read{ 0 }; read < numNotes; read++) { // read is to take the value input at that position and assign
+		if (input.at(read) == "A") {			   // the proper output to the output vector in the same position
+			outputFirstString.at(read) = positionOnString.at(5);
+			outputSecondString.at(read) = positionOnString.at(10);
+			outputThirdString.at(read) = positionOnString.at(2);
+			outputFourthString.at(read) = positionOnString.at(7);
+			outputFifithString.at(read) = positionOnString.at(0);
+			outputSixthString.at(read) = positionOnString.at(5);
+		}
+		else if (input.at(read) == "A#") {
+			outputFirstString.at(read) = positionOnString.at(6);
+			outputSecondString.at(read) = positionOnString.at(11);
+			outputThirdString.at(read) = positionOnString.at(3);
+			outputFourthString.at(read) = positionOnString.at(8);
+			outputFifithString.at(read) = positionOnString.at(1);
+			outputSixthString.at(read) = positionOnString.at(6);
+		}
+		else if (input.at(read) == "B") {
+			outputFirstString.at(read) = positionOnString.at(7);
+			outputSecondString.at(read) = positionOnString.at(0);
+			outputThirdString.at(read) = positionOnString.at(4);
+			outputFourthString.at(read) = positionOnString.at(9);
+			outputFifithString.at(read) = positionOnString.at(2);
+			outputSixthString.at(read) = positionOnString.at(7);
+		}
+		else if (input.at(read) == "C") {
+			outputFirstString.at(read) = positionOnString.at(8);
+			outputSecondString.at(read) = positionOnString.at(1);
+			outputThirdString.at(read) = positionOnString.at(5);
+			outputFourthString.at(read) = positionOnString.at(10);
+			outputFifithString.at(read) = positionOnString.at(3);
+			outputSixthString.at(read) = positionOnString.at(8);
+		}
+		else if (input.at(read) == "C#") {
+			outputFirstString.at(read) = positionOnString.at(9);
+			outputSecondString.at(read) = positionOnString.at(2);
+			outputThirdString.at(read) = positionOnString.at(6);
+			outputFourthString.at(read) = positionOnString.at(11);
+			outputFifithString.at(read) = positionOnString.at(4);
+			outputSixthString.at(read) = positionOnString.at(9);
+		}
+		else if (input.at(read) == "D") {
+			outputFirstString.at(read) = positionOnString.at(10);
+			outputSecondString.at(read) = positionOnString.at(3);
+			outputThirdString.at(read) = positionOnString.at(7);
+			outputFourthString.at(read) = positionOnString.at(0);
+			outputFifithString.at(read) = positionOnString.at(5);
+			outputSixthString.at(read) = positionOnString.at(10);
+		}
+		else if (input.at(read) == "D#") {
+			outputFirstString.at(read) = positionOnString.at(11);
+			outputSecondString.at(read) = positionOnString.at(4);
+			outputThirdString.at(read) = positionOnString.at(8);
+			outputFourthString.at(read) = positionOnString.at(1);
+			outputFifithString.at(read) = positionOnString.at(4);
+			outputSixthString.at(read) = positionOnString.at(11);
+		}
+		else if (input.at(read) == "E") {
+			outputFirstString.at(read) = positionOnString.at(0);
+			outputSecondString.at(read) = positionOnString.at(5);
+			outputThirdString.at(read) = positionOnString.at(9);
+			outputFourthString.at(read) = positionOnString.at(2);
+			outputFifithString.at(read) = positionOnString.at(7);
+			outputSixthString.at(read) = positionOnString.at(0);
+		}
+		else if (input.at(read) == "F") {
+			outputFirstString.at(read) = positionOnString.at(1);
+			outputSecondString.at(read) = positionOnString.at(6);
+			outputThirdString.at(read) = positionOnString.at(10);
+			outputFourthString.at(read) = positionOnString.at(3);
+			outputFifithString.at(read) = positionOnString.at(8);
+			outputSixthString.at(read) = positionOnString.at(1);
+		}
+		else if (input.at(read) == "F#") {
+			outputFirstString.at(read) = positionOnString.at(2);
+			outputSecondString.at(read) = positionOnString.at(7);
+			outputThirdString.at(read) = positionOnString.at(11);
+			outputFourthString.at(read) = positionOnString.at(4);
+			outputFifithString.at(read) = positionOnString.at(9);
+			outputSixthString.at(read) = positionOnString.at(2);
+		}
+		else if (input.at(read) == "G") {
+			outputFirstString.at(read) = positionOnString.at(3);
+			outputSecondString.at(read) = positionOnString.at(8);
+			outputThirdString.at(read) = positionOnString.at(0);
+			outputFourthString.at(read) = positionOnString.at(5);
+			outputFifithString.at(read) = positionOnString.at(10);
+			outputSixthString.at(read) = positionOnString.at(3);
+		}
+		else if (input.at(read) == "G#") {
+			outputFirstString.at(read) = positionOnString.at(4);
+			outputSecondString.at(read) = positionOnString.at(9);
+			outputThirdString.at(read) = positionOnString.at(1);
+			outputFourthString.at(read) = positionOnString.at(6);
+			outputFifithString.at(read) = positionOnString.at(11);
+			outputSixthString.at(read) = positionOnString.at(4);
+		}
+		else {
+			cout << "Incorrect note, please try again" << endl;
+		}
+	}
+	for (int e{ 0 }; e < numNotes; e++) {
+		cout << outputFirstString.at(e);
+	}
+	cout << endl;
+	for (int B{ 0 }; B < numNotes; B++) {
+		cout << outputSecondString.at(B);
+	}
+	cout << endl;
+	for (int G{ 0 }; G < numNotes; G++) {
+		cout << outputThirdString.at(G);
+	}
+	cout << endl;
+	for (int D{ 0 }; D < numNotes; D++) {
+		cout << outputFourthString.at(D);
+	}
+	cout << endl;
+	for (int A{ 0 }; A < numNotes; A++) {
+		cout << outputFifithString.at(A);
+	}
+	cout << endl;
+	for (int E{ 0 }; E < numNotes; E++) {
+		cout << outputSixthString.at(E);
+	}
+	cout << endl;
+
+	starsFunction();
+	cout << endl << "Thank You!";
+
+	return 0;
+}
+void starsFunction() {
+	for (int star = 1; star <= numNotes; star++)
+		cout << "*****";
+}
+void typedNotesOutput() {
+	for (int k{ 0 }; k < numNotes; k++) {
+		if (input.at(k) == "A") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "A#") {
+			cout << "=" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "B") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "C") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "C#") {
+			cout << "=" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "D") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "D#") {
+			cout << "=" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "E") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "F") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "F#") {
+			cout << "=" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "G") {
+			cout << "==" << input.at(k) << "==";
+		}
+		else if (input.at(k) == "G#") {
+			cout << "=" << input.at(k) << "==";
+		}
+		else
+			cout << "Incorrect Note!";
+	}
+}
